@@ -1,15 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
 
 <head>
     <meta charset="UTF-8">
-    <title>FlaskApp</title>
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    <h2> to FlaskApp!</h2>
-    <h3>{{ utc_dt }}</h3>
+    <div class="treatmentTest">
+        <h1>Predict Treatment Conditions</h1>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <label for="Age">Age</label>
+            <input type="text" name="Age" placeholder="Age" required="required" />
+
+            <label for="Gender">Gender</label>
+            <input type="text" name="Gender" placeholder="Gender" required="required" />
+
+            <label for="Country">Country</label>
+            <input type="text" name="Country" placeholder="Country" required="required" />
+
+            <label for="state">Self Employed?</label>
+            <input type="text" name="self_employed" placeholder="['No', 'Yes']" required="required" />
+
+            <label for="family_history">Family History?</label>
+            <input type="text" name="family_history" placeholder="['No', 'Yes']" required="required" />
+
+            <label for="treatment">How much does work interfere with you?</label>
+            <input type="text" name="work_interfere" placeholder="['Never', 'Often', 'Rarely', 'Sometimes', 'Unknown']"
+                required="required" />
+
+            <label for="no_employees">How many employees does your company or organization have?</label>
+            <input type="text" name="no_employees"
+                placeholder="['1-5', '100-500', '26-100', '500-1000', '6-25', 'More than 1000']" required="required" />
+
+            <label for="remote_work">Do you work remotely?</label>
+            <input type="text" name="remote_work" placeholder="['No', 'Yes']" required="required" />
+
+            <label for="tech_company">Is your employer primarily a tech company/organization?</label>
+            <input type="text" name="tech_company" placeholder="['No', 'Yes']" required="required" />
+
+            <label for="benefits">Does your employer provide mental health benefits?</label>
+            <input type="text" name="benefits" placeholder="[Don't know, 'No', 'Yes']" required="required" />
+
+            <label for="care_options">Do you know the options for mental health care your employer provides?</label>
+            <input type="text" name="care_options" placeholder="['No', 'Not sure', 'Yes']" required="required" />
+
+            <label for="wellness_program">Has your employer ever discussed mental health as part of an employee wellness
+                program?</label>
+            <input type="text" name="wellness_program" placeholder="[Don't know, 'No', 'Yes']" required="required" />
+
+            <label for="seek_help">Does your employer provide resources to learn more about mental health issues and how to
+                seek help?</label>
+            <input type="text" name="seek_help" placeholder="[Don't know, 'No', 'Yes']" required="required" />
+
+            <label for="anonymity">Is your anonymity protected if you choose to take advantage of mental health or
+                substance abuse treatment resources?</label>
+            <input type="text" name="anonymity" placeholder="[Don't know, 'No', 'Yes']" required="required" />
+
+            <label for="leave">How easy is it for you to take medical leave for a mental health condition?</label>
+            <input type="text" name="leave"
+                placeholder="['Don't know', 'Somewhat difficult', 'Somewhat easy', 'Very difficult', 'Very easy']"
+                required="required" />
+
+            <label for="mental_health_consequence">Do you think that discussing a mental health issue with your employer
+            <input type="text" name="mental_health_consequence" placeholder="['Maybe', 'No', 'Yes']"
+                required="required" />
+
+            <label for="phys_health_consequence">Do you think that discussing a physical health issue with your employer
+            <input type="text" name="phys_health_consequence" placeholder="['Maybe', 'No', 'Yes']"
+                required="required" />
+
+            <label for="coworkers">Would you be willing to discuss a mental health issue with your coworkers?</label>
+            <input type="text" name="coworkers" placeholder="['No', 'Some of them', 'Yes']" required="required" />
+           
+            <label for="supervisor">Would you be willing to discuss a mental health issue with your direct supervisor(s)?</label>
+            <input type="text" name="supervisor" placeholder=" ['No', 'Some of them', 'Yes']" required="required" />
+           
+            <label for="mental_health_interview">Would you bring up a mental health issue with a potential employer in an
+                interview?</label>
+            <input type="text" name="mental_health_interview" placeholder="['Maybe', 'No', 'Yes']"
+                required="required" />
+            
+            <label for="phys_health_interview">Would you bring up a physical health issue with a potential employer in an
+            <input type="text" name="phys_health_interview" placeholder="['Maybe', 'No', 'Yes']]" required="required" />
+            
+            <label for="mental_vs_physical">Do you feel that your employer takes mental health as seriously as physical
+                health?</label>
+            <input type="text" name="mental_vs_physical" placeholder="[Don't know, 'No', 'Yes']" required="required" />
+            
+            <label for="obs_consequence">Have you heard of or observed negative consequences for coworkers with mental
+                health conditions in your workplace?</label>
+            <input type="text" name="obs_consequence" placeholder="['No', 'Yes']" required="required" />
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+
+    </div>
+
+
 </body>
 
 </html>
