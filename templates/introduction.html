@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindfulMetrics</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='introduction.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Welcome to MindfulMetrics</h1>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <img src="/static/images/head.png" alt="Lock Icon" class="icon">
+      <h2>Take control of your mental health</h2>
+      <p>Confidentially check if you need professional help, and get access to mental health resources.</p>
+      <a href="{{ url_for('form')}}" class="cta-button">Get started</a>
+    </section>
+  
+
+     <section class="features">
+      <h3>Our Features</h3>
+      <div class="card-container">
+        <div class="card">
+          <h4>Confidential</h4>
+          <img src="/static/images/undraw_confidential_letter_w6ux.svg" alt="Lock Icon" class="icon">
+          <p>All of your information is kept private and confidential. You have full control over your data.</p>
+        </div>
+        <div class="card">
+          <h4>Personalized</h4>
+          <img src="/static/images/undraw_personal_data_re_ihde.svg" alt="Analysis Icon" class="icon">
+          <p>We use your data to provide personalized insights and recommendations for improving your mental health.</p>
+        </div>
+        <div class="card">
+          <h4>Accessible</h4>
+          <img src="/static/images/bubble-gum-open-lock.png" alt="Smartphone Icon" class="icon">
+          <p>Our service is accessible 24/7 from any device. Get the help you need, when you need it.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© MindfulMetrics 2023 | Made with ❤️ by Team InnoTech</p>
+  </footer>
+  
+  <script src="app.js"></script>
+</body>
+</html>

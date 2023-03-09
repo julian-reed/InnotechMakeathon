@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Results</title>
-      <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
-</head>
-<body>
-      <div>
-      <h1>Results</h1>
+<html>
 
-      <h4>{{ prediction_text }}</h4>
-      <br><br>
-      <h2>Submit another form?</h2>
-     <!-- <a href="{{ url_for('home') }}">Home</a>-->
-     <button > <a href="{{url_for('home') }}">Click Here</a></button>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MindfulMetrics - Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+</head>
+
+<body>
+  <div class="container">
+        <h1>Results</h1>
+    <img src="/static/images/undraw_online_stats_0g94.svg">
+
+        <h4>{{ prediction_text }}</h4>
+        
+        <a href="{{ url_for('home') }}" class="button">Home</a>
+        <a href="{{ url_for('form') }}" class="button">Submit Form</a>
+  </div>
+  </div>
+
+      <footer>
+        Made with ❤️ by Team InnoTech
+      </footer>
+
 </body>
+
 </html>
