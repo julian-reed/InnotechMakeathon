@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+body {
+
+      font-family: 'Open Sans', sans-serif;
+            color: #fff;
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 1.2px;
+      background-color: #E1F3FF;
+      color: black;
+
+}
+
+
+.btn{  
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007AFF;
+      color: #FFFFFF;
+      font-size: 18px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease-in-out;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #5281FF;
+      color: #FFFFFF;
+      border-radius: 30px;
+      margin-top: 20px;
+      border: none;
+}
+
+.btn:hover {
+      background-color: #0066CC;
+      cursor: pointer;
+}
+
+.treatmentTest {
+      margin: 0 auto;
+      width: 50%;
+      padding: 1em;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      letter-spacing: 1.2px;
+      padding-right: 10%;
+      padding-left: 10%;
+      color: #5281FF;
+}
+
+input::placeholder {
+      color: #E1F3FF;
+      opacity: 0.5;
+}
+
+
+input {
+      width: 50%;
+      margin-bottom: 40px;
+      background: rgba(0, 0, 0, 0.3);
+      outline: none;
+      padding: 10px;
+      font-size: 13px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+      margin-top: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 25%;
+      margin-right: 25%;
+      color: #E1F3FF;
+      background-color: #5281FF;
+      
+}
+
+label {
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      letter-spacing: 1px;
+      text-align: center;
+      font-size: 17px;
+      color: #5281FF;
+}

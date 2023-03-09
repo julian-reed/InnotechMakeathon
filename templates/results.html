@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MindfulMetrics - Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+</head>
+
+<body>
+  <div class="container">
+        <h1>Results</h1>
+    <img src="/static/images/undraw_online_stats_0g94.svg">
+
+        <h4>{{ prediction_text }}</h4>
+        
+        <a href="{{ url_for('home') }}" class="button">Home</a>
+        <a href="{{ url_for('form') }}" class="button">Submit Form</a>
+  </div>
+  </div>
+
+      <footer>
+        Made with ❤️ by Team InnoTech
+      </footer>
+
+</body>
+
+</html>
