@@ -46,6 +46,12 @@ body {
       letter-spacing: 1.2px;
       padding-right: 10%;
       padding-left: 10%;
+      color: #5281FF;
+}
+
+input::placeholder {
+      color: #E1F3FF;
+      opacity: 0.5;
 }
 
 
@@ -69,6 +75,7 @@ input {
       margin-right: 25%;
       color: #E1F3FF;
       background-color: #5281FF;
+      
 }
 
 label {
@@ -76,4 +83,5 @@ label {
       letter-spacing: 1px;
       text-align: center;
       font-size: 17px;
+      color: #5281FF;
 }

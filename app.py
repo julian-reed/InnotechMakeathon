@@ -66,7 +66,7 @@ def predict():
     prediction = model.predict(X)
     
 
-    if prediction == 0:
+    if prediction == 1:
         output = 'No, you can focus on managing your mental health'
     else:
         output = 'Yes, it would be better to seek professional help'
