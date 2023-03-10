@@ -22,7 +22,9 @@
 * If the user needs professional help, we provide resources and information to help them connect with mental health professionals.
 
 ### Demo - Test Cases
+<p align="center">
 <img src='MLyes.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' width="70" height="250" /><img src='MLno.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' width="70" height="250" />
+  </p>
 
 ### Resources
 * https://www.youtube.com/watch?v=gaHRobcHPvI
