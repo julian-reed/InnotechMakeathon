@@ -25,4 +25,4 @@ Thank you for using our web app. We hope that it helps you in your journey towar
 ### Demo
 
 # Test cases
-<img src='MLyes.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' width="100" height="350" /><img src='MLno.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' width="100" height="350" />
+<img src='MLyes.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' width="90" height="350" /><img src='MLno.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' width="90" height="350" />
