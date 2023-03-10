@@ -22,3 +22,7 @@ Welcome to our web app! Our goal is to help individuals determine if they need p
 
 Thank you for using our web app. We hope that it helps you in your journey towards better mental health. If you have any feedback or suggestions for improvements, please feel free to contact us.
 
+### Demo
+
+# Test cases
+<img src='MLyes.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' width="100" height="350" /><img src='MLno.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' width="100" height="350" />
